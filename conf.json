@@ -1,0 +1,24 @@
+{
+    "redis.host":"10.221.164.6:6379",
+    "redis.password":"admin123",
+    "redis.expires":600000000000,
+    "auth.token":true,
+    "auth.exclusion":{
+        "/auth/token": true,
+        "/health": true
+    },
+    "zaplog.config":{
+		"level": "debug",
+        "encoding": "console",
+		"outputPaths": ["stdout", "api.log"],
+		"errorOutputPaths": ["stderr", "apiError.log"],
+		"encoderConfig": {
+			"messageKey": "message",
+            "levelKey": "level",
+            "NameKey": "logger",
+            "timeKey": "time",
+            "callerKey":"caller",
+            "StacktraceKey": "stacktrace"
+		}
+	}
+}
